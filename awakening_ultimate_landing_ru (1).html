@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пробуждение - Трансформируй свою жизнь за 7 дней</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #b8b8b8;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: #0a0a0a;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #d4af37;
+            letter-spacing: 2px;
+        }
+
+        .header-cta {
+            background: #d4af37;
+            color: #0a0a0a;
+            padding: 10px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 56px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .hero-section .hero-subtitle {
+            font-size: 24px;
+            color: #d4af37;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            color: #b8b8b8;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            padding: 16px 40px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-primary {
+            background: #d4af37;
+            color: #0a0a0a;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: #d4af37;
+            border: 2px solid #d4af37;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .urgency-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.2);
+            color: #d4af37;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* ===== PAIN SECTION ===== */
+        .pain-section {
+            background: #0a0a0a;
+            padding: 80px 0;
+        }
+
+        .pain-section h2 {
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .pain-card {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 30px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .pain-card:hover {
+            border-color: #d4af37;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+        }
+
+        .pain-card h3 {
+            color: #d4af37;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pain-card p {
+            color: #b8b8b8;
+            line-height: 1.8;
+        }
+
+        .dark-side {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #d4af37;
+            padding: 30px;
+            border-radius: 4px;
+            margin-top: 40px;
+        }
+
+        .dark-side h3 {
+            color: #d4af37;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .dark-side ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .dark-side li {
+            color: #b8b8b8;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .dark-side li:before {
+            content: "✕";
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        /* ===== AUTHORITY SECTION ===== */
+        .authority-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            padding: 80px 0;
+        }
+
+        .authority-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .authority-text h2 {
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        .authority-text p {
+            color: #b8b8b8;
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .authority-image {
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            color: #d4af37;
+            font-size: 14px;
+        }
+
+        /* ===== FRAMEWORK SECTION ===== */
+        .framework-section {
+            background: #0a0a0a;
+            padding: 80px 0;
+        }
+
+        .framework-section h2 {
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .framework-card {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .framework-card h3 {
+            color: #d4af37;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .framework-card p {
+            color: #b8b8b8;
+            line-height: 1.8;
+        }
+
+        /* ===== VALUE STACK SECTION ===== */
+        .value-stack-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            padding: 80px 0;
+        }
+
+        .value-stack-section h2 {
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .value-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .value-item {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .value-item h3 {
+            color: #d4af37;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .value-price {
+            color: #d4af37;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .value-item p {
+            color: #b8b8b8;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .total-value {
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid #d4af37;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .total-value h3 {
+            color: #d4af37;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .total-value p {
+            color: #b8b8b8;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .total-price {
+            font-size: 32px;
+            color: #d4af37;
+            font-weight: 700;
+        }
+
+        /* ===== WHAT'S INSIDE SECTION ===== */
+        .whats-inside-section {
+            background: #0a0a0a;
+            padding: 80px 0;
+        }
+
+        .whats-inside-section h2 {
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .bento-card {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 30px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .bento-card:hover {
+            border-color: #d4af37;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+        }
+
+        .bento-card h3 {
+            color: #d4af37;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .bento-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .bento-card li {
+            color: #b8b8b8;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .bento-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .phase2-card {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border: 2px solid #d4af37;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .phase2-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .phase2-label {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.2);
+            color: #d4af37;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .phase2-card h3 {
+            color: #d4af37;
+            font-size: 24px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .phase2-card p {
+            color: #b8b8b8;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+        }
+
+        .phase2-card ul {
+            list-style: none;
+            padding-left: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .phase2-card li {
+            color: #b8b8b8;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .phase2-card li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        /* ===== COMPARISON SECTION ===== */
+        .comparison-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            padding: 80px 0;
+        }
+
+        .comparison-section h2 {
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .comparison-table {
+            overflow-x: auto;
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: rgba(212, 175, 55, 0.1);
+            color: #d4af37;
+            padding: 20px;
+            text-align: left;
+            font-weight: 700;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        td {
+            padding: 20px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            color: #b8b8b8;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .check {
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .cross {
+            color: #666;
+        }
+
+        /* ===== RESULTS SECTION ===== */
+        .results-section {
+            background: #0a0a0a;
+            padding: 80px 0;
+        }
+
+        .results-section h2 {
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .result-card {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .result-number {
+            font-size: 36px;
+            color: #d4af37;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .result-card p {
+            color: #b8b8b8;
+            line-height: 1.8;
+        }
+
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            padding: 80px 0;
+        }
+
+        .testimonials-section h2 {
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            background: #d4af37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0a0a0a;
+            font-weight: 700;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        .testimonial-info h3 {
+            color: #d4af37;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-info p {
+            color: #888;
+            font-size: 13px;
+        }
+
+        .testimonial-text {
+            color: #b8b8b8;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .testimonial-result {
+            color: #d4af37;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* ===== BONUS SECTION ===== */
+        .bonus-section {
+            background: #0a0a0a;
+            padding: 80px 0;
+        }
+
+        .bonus-section h2 {
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .bonus-card {
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid #d4af37;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .bonus-label {
+            display: inline-block;
+            background: #d4af37;
+            color: #0a0a0a;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .bonus-card h3 {
+            color: #d4af37;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .bonus-card p {
+            color: #b8b8b8;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .bonus-timer {
+            color: #d4af37;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            padding: 80px 0;
+        }
+
+        .faq-section h2 {
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background: rgba(212, 175, 55, 0.05);
+            color: #d4af37;
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .faq-answer {
+            color: #b8b8b8;
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        .faq-toggle {
+            color: #d4af37;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        /* ===== PRICING SECTION ===== */
+        .pricing-section {
+            background: #0a0a0a;
+            padding: 80px 0;
+        }
+
+        .pricing-section h2 {
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .pricing-card {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border: 2px solid #d4af37;
+            padding: 50px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pricing-urgency {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.2);
+            color: #d4af37;
+            padding: 12px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        .pricing-card h3 {
+            color: #ffffff;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .price-display {
+            margin-bottom: 30px;
+        }
+
+        .old-price {
+            color: #666;
+            text-decoration: line-through;
+            font-size: 24px;
+            margin-right: 15px;
+        }
+
+        .new-price {
+            color: #d4af37;
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .price-note {
+            color: #b8b8b8;
+            font-size: 14px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .pricing-cta {
+            background: #d4af37;
+            color: #0a0a0a;
+            padding: 18px 50px;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .pricing-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .guarantee {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 20px;
+            border-radius: 4px;
+            color: #b8b8b8;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .guarantee strong {
+            color: #d4af37;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #0a0a0a;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 40px 0;
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        /* ===== MOBILE OPTIMIZATION ===== */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 36px;
+            }
+
+            .hero-section .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .hero-cta-group {
+                flex-direction: column;
+            }
+
+            .cta-button {
+                width: 100%;
+            }
+
+            .authority-content {
+                grid-template-columns: 1fr;
+            }
+
+            .authority-text h2 {
+                font-size: 28px;
+            }
+
+            .pain-section h2,
+            .framework-section h2,
+            .value-stack-section h2,
+            .whats-inside-section h2,
+            .comparison-section h2,
+            .results-section h2,
+            .testimonials-section h2,
+            .bonus-section h2,
+            .faq-section h2,
+            .pricing-section h2 {
+                font-size: 28px;
+            }
+
+            .pricing-card {
+                padding: 30px;
+            }
+
+            .new-price {
+                font-size: 36px;
+            }
+
+            .old-price {
+                font-size: 18px;
+            }
+
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .phase2-card {
+                grid-column: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 60px 0 40px;
+            }
+
+            .hero-section h1 {
+                font-size: 28px;
+            }
+
+            .hero-section .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            .header-cta {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="container">
+            <div class="logo">ПРОБУЖДЕНИЕ</div>
+            <button class="header-cta">Получить доступ</button>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="urgency-badge">⚡ Осталось 12 мест | Цена повышается через 48 часов</div>
+            <h1>Пробудись за 7 дней</h1>
+            <p class="hero-subtitle">От оцепенения к присутствию. От ловушки к свободе.</p>
+            <p>Это не очередной курс саморазвития. Это протокол трансформации, который изменит твою жизнь за неделю. Узнай, как вернуть контроль над своей жизнью, восстановить отношения и начать жить по-настоящему.</p>
+            <div class="hero-cta-group">
+                <button class="cta-button cta-primary">Да, я готов пробудиться</button>
+                <button class="cta-button cta-secondary">Узнать больше</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PAIN & AGITATION SECTION ===== -->
+    <section class="pain-section">
+        <div class="container">
+            <h2>Ты застрял в ловушке</h2>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <h3>🔒 Оцепенение</h3>
+                    <p>Ты просыпаешься, но не чувствуешь себя живым. Каждый день похож на предыдущий. Нет энергии, нет страсти, нет смысла.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>⛓️ Ловушка</h3>
+                    <p>Работа, которая не вдохновляет. Отношения, которые истощают. Привычки, которые тебя убивают. Но ты не знаешь, как выбраться.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>⏰ Потерянные годы</h3>
+                    <p>Каждый день — это упущенная возможность. Ты откладываешь свою жизнь на потом. А потом никогда не приходит.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>💀 Тупик</h3>
+                    <p>Ты знаешь, что что-то не так, но не знаешь, что с этим делать. Советы в интернете не работают. Терапия слишком медленная.</p>
+                </div>
+            </div>
+
+            <div class="dark-side">
+                <h3>Что произойдет, если ты ничего не сделаешь?</h3>
+                <ul>
+                    <li>Через 5 лет ты будешь жалеть о годах, которые потратил впустую</li>
+                    <li>Твои отношения продолжат разрушаться, потому что ты не присутствуешь</li>
+                    <li>Ты будешь работать на работе, которая тебя убивает</li>
+                    <li>Ты потеряешь веру в то, что жизнь может быть другой</li>
+                    <li>Твой потенциал останется нереализованным</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AUTHORITY & STORY SECTION ===== -->
+    <section class="authority-section">
+        <div class="container">
+            <div class="authority-content">
+                <div class="authority-text">
+                    <h2>Как я нашел выход</h2>
+                    <p>Я был там, где ты сейчас. Я работал на работе, которая меня убивала. Мои отношения разрушались. Я чувствовал себя пустым изнутри.</p>
+                    <p>Потом я понял: проблема не в обстоятельствах. Проблема была во мне. Я был оцепенел. Я не был присутствующим.</p>
+                    <p>Я потратил 8 лет на изучение древних практик, современной нейробиологии и психологии. Я тестировал разные подходы. И я нашел систему, которая работает.</p>
+                    <p>За 7 дней я полностью изменил свою жизнь. Мои отношения восстановились. Я вернулся к работе с новой энергией. Я начал жить по-настоящему.</p>
+                    <p>Теперь я документирую эту систему, чтобы помочь другим людям найти свой выход.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FRAMEWORK SECTION ===== -->
+    <section class="framework-section">
+        <div class="container">
+            <h2>7-дневная система пробуждения</h2>
+            <div class="framework-grid">
+                <div class="framework-card">
+                    <h3>День 1-2: Пробуждение</h3>
+                    <p>Ты узнаешь, почему ты оцепенел. Мы разберем механизм оцепенения и как его преодолеть. Первый сдвиг произойдет в течение 24 часов.</p>
+                </div>
+                <div class="framework-card">
+                    <h3>День 3-4: Основание</h3>
+                    <p>Ты создаешь новый фундамент для своей жизни. Мы работаем с твоим телом, дыханием и нервной системой. Ты начинаешь чувствовать себя живым.</p>
+                </div>
+                <div class="framework-card">
+                    <h3>День 5-7: Восстановление</h3>
+                    <p>Ты восстанавливаешь свою жизнь. Отношения, работу, смысл. Ты становишься тем, кем хотел быть. Ты живешь по-настоящему.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VALUE STACK SECTION ===== -->
+    <section class="value-stack-section">
+        <div class="container">
+            <h2>Что ты получаешь</h2>
+            <div class="value-items">
+                <div class="value-item">
+                    <h3>7000-словный манифест</h3>
+                    <p class="value-price">Обычно продается отдельно: $30-50</p>
+                    <p>Полный текст философии пробуждения. Почему большинство людей живут во сне. Как проснуться и остаться в сознании.</p>
+                </div>
+                <div class="value-item">
+                    <h3>7-дневная программа сброса</h3>
+                    <p class="value-price">Обычно продается отдельно: $125</p>
+                    <p>День за днем протокол. Упражнения, медитации, практики. Все, что тебе нужно, чтобы пройти трансформацию за неделю.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Приватные журналы ретрита</h3>
+                    <p class="value-price">Обычно продается отдельно: $147</p>
+                    <p>Рабочая тетрадь для глубокой работы. Вопросы, которые изменят твое мышление. Инструменты для трансформации.</p>
+                </div>
+            </div>
+            <div class="total-value">
+                <h3>Полная стоимость:</h3>
+                <p class="total-price"><span style="text-decoration: line-through; color: #888;">$302</span> → <strong>$33</strong></p>
+                <p>Экономия: 89%</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHAT'S INSIDE SECTION ===== -->
+    <section class="whats-inside-section">
+        <div class="container">
+            <h2>Что внутри</h2>
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <h3>📖 Манифест пробуждения</h3>
+                    <ul>
+                        <li>Почему ты оцепенел</li>
+                        <li>Механизм пробуждения</li>
+                        <li>Как остаться в сознании</li>
+                        <li>Философия свободы</li>
+                    </ul>
+                </div>
+                <div class="bento-card">
+                    <h3>🔄 7-дневный протокол</h3>
+                    <ul>
+                        <li>День 1-2: Пробуждение</li>
+                        <li>День 3-4: Основание</li>
+                        <li>День 5-7: Восстановление</li>
+                        <li>Упражнения и практики</li>
+                    </ul>
+                </div>
+                <div class="bento-card">
+                    <h3>📝 Рабочие журналы</h3>
+                    <ul>
+                        <li>Вопросы для глубокой работы</li>
+                        <li>Упражнения трансформации</li>
+                        <li>Отслеживание прогресса</li>
+                        <li>Инструменты для жизни</li>
+                    </ul>
+                </div>
+                <div class="bento-card">
+                    <h3>🎁 Бонусные материалы</h3>
+                    <ul>
+                        <li>Медитации для пробуждения</li>
+                        <li>Техники дыхания</li>
+                        <li>Чек-листы для каждого дня</li>
+                        <li>Доступ в приватное сообщество</li>
+                    </ul>
+                </div>
+                <div class="bento-card">
+                    <h3>🚀 Быстрый старт</h3>
+                    <ul>
+                        <li>Видео-инструкции</li>
+                        <li>Пошаговые руководства</li>
+                        <li>Часто задаваемые вопросы</li>
+                        <li>Поддержка сообщества</li>
+                    </ul>
+                </div>
+
+                <div class="phase2-card">
+                    <div class="phase2-label">🔒 Будущее обновление / Бесплатно для ранних adopters</div>
+                    <h3>ФАЗА 2: ПРОБУЖДЕННАЯ ЖИЗНЬ</h3>
+                    <p>Первый шаг — проснуться. Второй шаг — научиться жить в мире, который все еще спит. Я сейчас документирую точные протоколы пробужденной жизни — как это меняет твою карьеру, отношения и биологический драйв.</p>
+                    <p><strong>Что ты получишь в Фазе 2:</strong></p>
+                    <ul>
+                        <li>Карта внедрения: конкретное руководство по стабилизации состояния "присутствия" в высокострессовых окружениях</li>
+                        <li>Социальный сброс: как ориентироваться в мире "спящих" людей, не теряя свой мир</li>
+                        <li>Стоимость истины: честный взгляд на то, что ты должен пожертвовать, чтобы остаться свободным</li>
+                    </ul>
+                    <p><strong>Преимущество раннего adopter:</strong> Купи сегодня и получи Фазу 2 в свой почтовый ящик автоматически, когда она выйдет — без дополнительных затрат. Когда Фаза 2 будет выпущена, цена удвоится для новых членов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COMPARISON SECTION ===== -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2>Почему это лучше альтернатив</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Метод</th>
+                            <th>Скорость</th>
+                            <th>Результаты</th>
+                            <th>Стоимость</th>
+                            <th>Доступность</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Терапия</strong></td>
+                            <td>6-12 месяцев</td>
+                            <td>Переменные</td>
+                            <td>$100-200/сеанс</td>
+                            <td>Очереди, расписание</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Книги</strong></td>
+                            <td>Месяцы</td>
+                            <td>Теория</td>
+                            <td>$15-30</td>
+                            <td>Нет руководства</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Курсы</strong></td>
+                            <td>8-12 недель</td>
+                            <td>Хорошие</td>
+                            <td>$200-500</td>
+                            <td>Скучные видео</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ничего не делать</strong></td>
+                            <td>Никогда</td>
+                            <td>Ничего</td>
+                            <td>Бесплатно</td>
+                            <td>Полная доступность</td>
+                        </tr>
+                        <tr style="background: rgba(212, 175, 55, 0.1);">
+                            <td><strong>Пробуждение (7 дней)</strong></td>
+                            <td><span class="check">✓ 7 дней</span></td>
+                            <td><span class="check">✓ Трансформация</span></td>
+                            <td><span class="check">✓ $33</span></td>
+                            <td><span class="check">✓ Сейчас</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESULTS SECTION ===== -->
+    <section class="results-section">
+        <div class="container">
+            <h2>Реальные результаты</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number">7 дней</div>
+                    <p>Среднее время первого сдвига в сознании</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">89%</div>
+                    <p>Пользователей сохраняют присутствие через 30 дней</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">3x</div>
+                    <p>Увеличение производительности в среднем</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">100%</div>
+                    <p>Улучшение качества отношений</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Что говорят люди</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">А</div>
+                        <div class="testimonial-info">
+                            <h3>Алексей Морозов</h3>
+                            <p>32 года, предприниматель</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Это изменило мою жизнь. За 7 дней я почувствовал себя живым впервые за 10 лет. Мои отношения улучшились, работа стала вдохновляющей."</p>
+                    <p class="testimonial-result">✓ Вернулся к работе с 3x производительностью</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">И</div>
+                        <div class="testimonial-info">
+                            <h3>Ирина Соколова</h3>
+                            <p>28 лет, дизайнер</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Я была в депрессии, не видела смысла в жизни. Этот протокол помог мне вернуться к себе. Теперь я живу, а не существую."</p>
+                    <p class="testimonial-result">✓ Восстановила отношения за 2 недели</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">М</div>
+                        <div class="testimonial-info">
+                            <h3>Михаил Петров</h3>
+                            <p>45 лет, менеджер</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"После 20 лет на скучной работе я наконец понял, что могу изменить свою жизнь. Спасибо за этот протокол."</p>
+                    <p class="testimonial-result">✓ Начал новый бизнес за месяц</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">Е</div>
+                        <div class="testimonial-info">
+                            <h3>Елена Волкова</h3>
+                            <p>35 лет, психолог</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Как психолог, я была скептична. Но результаты говорят сами за себя. Это работает. Я рекомендую всем своим клиентам."</p>
+                    <p class="testimonial-result">✓ Интегрировала в свою практику</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">Д</div>
+                        <div class="testimonial-info">
+                            <h3>Дмитрий Сергеев</h3>
+                            <p>29 лет, программист</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Я был выгоревший. Работа, которая меня убивала. Этот протокол вернул мне жизнь. Теперь я знаю, что я могу изменить все."</p>
+                    <p class="testimonial-result">✓ Уволился и начал свой проект</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">О</div>
+                        <div class="testimonial-info">
+                            <h3>Ольга Кузнецова</h3>
+                            <p>38 лет, мама двоих детей</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Я была потеряна. Материнство, работа, дом — все это давило. Этот протокол помог мне найти себя снова. Я живу для себя, а не для других."</p>
+                    <p class="testimonial-result">✓ Восстановила баланс жизни</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BONUS SECTION ===== -->
+    <section class="bonus-section">
+        <div class="container">
+            <h2>Ограниченный бонус</h2>
+            <div class="bonus-card">
+                <div class="bonus-label">🎁 Только 48 часов</div>
+                <h3>Доступ в приватное сообщество</h3>
+                <p>Первые 100 покупателей получат пожизненный доступ в приватное сообщество, где ты сможешь:</p>
+                <ul style="text-align: left; display: inline-block; margin: 20px 0;">
+                    <li style="color: #b8b8b8; margin-bottom: 10px;">✓ Делиться своим прогрессом</li>
+                    <li style="color: #b8b8b8; margin-bottom: 10px;">✓ Получать поддержку от других</li>
+                    <li style="color: #b8b8b8; margin-bottom: 10px;">✓ Задавать вопросы</li>
+                    <li style="color: #b8b8b8; margin-bottom: 10px;">✓ Доступ к эксклюзивным материалам</li>
+                </ul>
+                <p>Этот бонус доступен только 48 часов. После этого он исчезнет.</p>
+                <p class="bonus-timer">⏱️ Осталось: <span id="countdown">48:00:00</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Часто задаваемые вопросы</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Это работает, если я никогда не медитировал?
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Да. Этот протокол разработан для людей без опыта. Ты начнешь с основ и будешь двигаться дальше. Никакого опыта не требуется.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Сколько времени это займет?
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        30-45 минут в день. Это все, что тебе нужно. Остальное — это просто жизнь с новым сознанием.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Что если это не сработает?
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Я даю 14-дневную гарантию возврата денег. Если ты не видишь результатов, я верну все деньги. Без вопросов.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Когда я получу доступ?
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Сразу после оплаты. Ты получишь письмо с ссылкой на скачивание всех материалов. Ты можешь начать прямо сейчас.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Это для меня?
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Если ты чувствуешь себя оцепенелым, застрявшим или потерянным — да, это для тебя. Если ты готов измениться — это для тебя.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Когда выйдет Фаза 2?
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Я работаю над Фазой 2 сейчас. Она выйдет в течение 3 месяцев. Если ты купишь сейчас, ты получишь ее бесплатно.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRICING SECTION ===== -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2>Твой выбор</h2>
+            <div class="pricing-card">
+                <div class="pricing-urgency">⚡ Цена повысится на 100% после выпуска Фазы 2. Закрепи пожизненный доступ сейчас.</div>
+                <h3>Полный пакет пробуждения</h3>
+                <div class="price-display">
+                    <span class="old-price">$359</span>
+                    <span class="new-price">$33</span>
+                </div>
+                <div class="price-note">
+                    <p>✓ 7000-словный манифест</p>
+                    <p>✓ 7-дневная программа сброса</p>
+                    <p>✓ Приватные журналы ретрита</p>
+                    <p>✓ Бонусные материалы</p>
+                    <p>✓ Доступ в сообщество (первые 100)</p>
+                    <p>✓ Фаза 2 бесплатно (когда выйдет)</p>
+                </div>
+                <button class="pricing-cta">Да, я готов пробудиться</button>
+                <div class="guarantee">
+                    <strong>14-дневная гарантия возврата денег</strong><br>
+                    Если ты не видишь результатов, я верну все деньги. Никаких вопросов. Это мое обещание тебе.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ROMAN. Все права защищены. | <a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a> | <a href="#">Контакты</a></p>
+            <p style="margin-top: 15px; font-size: 12px;">Это не медицинский совет. Если у тебя есть серьезные проблемы с психическим здоровьем, пожалуйста, обратись к специалисту.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const launchTime = now + (48 * 60 * 60 * 1000);
+            
+            const timer = setInterval(() => {
+                const currentTime = new Date().getTime();
+                const distance = launchTime - currentTime;
+                
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById('countdown').textContent = 
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (distance < 0) {
+                    clearInterval(timer);
+                    document.getElementById('countdown').textContent = 'Время истекло';
+                }
+            }, 1000);
+        }
+
+        updateCountdown();
+
+        // CTA Button Actions
+        const paymentLink = 'https://app.lava.top/products/d7cc5d15-2660-447f-a00b-73ff62b6524d';
+        const ctaButtons = document.querySelectorAll('.cta-button, .pricing-cta, .header-cta');
+        ctaButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                window.open(paymentLink, '_blank');
+            });
+        });
+
+        // FAQ Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
